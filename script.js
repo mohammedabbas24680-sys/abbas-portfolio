@@ -83,4 +83,9 @@ counters.forEach(counter => {
     }
   };
   updateCounter();
+
+  function toggleTheme() {
+  document.body.classList.toggle("dark");
+}
+
 });
