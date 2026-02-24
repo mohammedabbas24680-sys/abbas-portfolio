@@ -87,5 +87,23 @@ counters.forEach(counter => {
   function toggleTheme() {
   document.body.classList.toggle("dark");
 }
+  const revealElements = document.querySelectorAll(".section, .card");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = "1";
+      entry.target.style.transform = "translateY(0)";
+    }
+  });
+});
+
+revealElements.forEach(el => {
+  el.style.opacity = "0";
+  el.style.transform = "translateY(50px)";
+  el.style.transition = "1s ease";
+  observer.observe(el);
+});
 
 });
+
