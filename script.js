@@ -84,11 +84,7 @@ counters.forEach(counter => {
   };
   updateCounter();
 
-  function toggleTheme() {
-  document.body.classList.toggle("dark");
-}
-  const revealElements = document.querySelectorAll(".section, .card");
-
+ 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -106,4 +102,5 @@ revealElements.forEach(el => {
 });
 
 });
+
 
